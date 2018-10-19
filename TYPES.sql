@@ -207,6 +207,22 @@ END;
 )
 
 /
+
+CREATE OR REPLACE TYPE BODY "MFB"."OTR_FIELD"IS
+     CONSTRUCTOR FUNCTION OTR_FIELD RETURN SELF AS RESULT IS
+       BEGIN
+  SELF.NEWVAL := NULL;
+  SELF.OLDVAL := NULL;
+  SELF.DATATYPE  := NULL;
+  SELF.ID := NULL;
+
+        RETURN;
+       END OTR_FIELD;
+END;
+/
+
+
+
 --------------------------------------------------------
 --  DDL for Type OTR_FM
 --------------------------------------------------------
@@ -222,6 +238,22 @@ END;
 )
 
 /
+
+CREATE OR REPLACE TYPE BODY "MFB"."OTR_FM"IS
+     CONSTRUCTOR FUNCTION OTR_FM RETURN SELF AS RESULT IS
+       BEGIN
+  SELFT.HEADER := NULL;
+  SELFT.ATTRLIST := NULL;
+  SELFT.FTMS := NULL;
+  SELFT.MAINFTM	:= NULL;
+  SELFT.MAINBTID := NULL;
+  SELFT.RESPONSE := NULL;
+
+        RETURN;
+       END OTR_FM;
+END;
+/
+
 --------------------------------------------------------
 --  DDL for Type OTR_FM_HEADER
 --------------------------------------------------------
@@ -242,6 +274,27 @@ END;
 )
 
 /
+
+CREATE OR REPLACE TYPE BODY "MFB"."OTR_FM_HEADER"IS
+     CONSTRUCTOR FUNCTION OTR_FM_HEADER RETURN SELF AS RESULT IS
+       BEGIN
+  SELF.USERID := NULL;
+  SELF.LANGUAGEID := NULL;
+  SELF.BRANCHID := NULL;
+  SELF.OFFICEID := NULL;
+  SELF.DEPTOID := NULL;
+  SELF.TERMINALID := NULL;
+  SELF.MESSENGERID := NULL;
+  SELF.SESSIONKEY := NULL;
+  SELF.EXTERNALREFERENCE := NULL;
+  SELF.REFERENCEUSER := NULL;
+  SELF.PROCESSTYPE := NULL;
+
+        RETURN;
+       END OTR_FM_HEADER;
+END;
+/
+
 --------------------------------------------------------
 --  DDL for Type OTR_FTM
 --------------------------------------------------------
@@ -256,6 +309,20 @@ END;
 )
 
 /
+
+CREATE OR REPLACE TYPE BODY "MFB"."OTR_FTM"IS
+     CONSTRUCTOR FUNCTION OTR_FTM RETURN SELF AS RESULT IS
+       BEGIN
+	SELF.TABS := NULL;
+  SELF.FISA_OBJECT_ID := NULL;
+  SELF.ID := NULL;
+  SELF.DATAKEY := NULL;
+  SELF.MESSAGELIST := NULL;
+
+        RETURN;
+       END OTR_FTM;
+END;
+/
 --------------------------------------------------------
 --  DDL for Type OTR_REC
 --------------------------------------------------------
@@ -266,6 +333,18 @@ END;
   constructor function "OTR_REC" return self as result
 )
 
+/
+
+CREATE OR REPLACE TYPE BODY "MFB"."OTR_REC"IS
+     CONSTRUCTOR FUNCTION OTR_REC RETURN SELF AS RESULT IS
+       BEGIN
+
+		SELF.FIELDS := NULL;
+  		SELF.RECSTATUS := NULL;
+
+        RETURN;
+       END OTR_REC;
+END;
 /
 --------------------------------------------------------
 --  DDL for Type OTR_SES_ATTR
@@ -278,6 +357,19 @@ END;
 )
 
 /
+
+CREATE OR REPLACE TYPE BODY "MFB"."OTR_SES_ATTR"IS
+     CONSTRUCTOR FUNCTION OTR_SES_ATTR RETURN SELF AS RESULT IS
+       BEGIN
+
+  SELF.attrName := NULL;
+  SELF.attrValue := NULL;  		
+
+        RETURN;
+       END OTR_SES_ATTR;
+END;
+/
+
 --------------------------------------------------------
 --  DDL for Type OTR_TAB
 --------------------------------------------------------
@@ -291,6 +383,20 @@ END;
 )
 
 /
+
+CREATE OR REPLACE TYPE BODY "MFB"."OTR_TAB"IS
+     CONSTRUCTOR FUNCTION OTR_TAB RETURN SELF AS RESULT IS
+       BEGIN
+ 
+  SELF.RECS:= NULL;
+  SELF.MULTIVALUE:= NULL;
+  SELF.PARENT:= NULL;
+  SELF.ID:= NULL;  
+
+        RETURN;
+       END OTR_TAB;
+END;
+/
 --------------------------------------------------------
 --  DDL for Type OTR_USER_MSG
 --------------------------------------------------------
@@ -301,6 +407,19 @@ END;
   constructor function "OTR_USER_MSG" return self as result
 )
 
+/
+
+
+CREATE OR REPLACE TYPE BODY "MFB"."OTR_USER_MSG"IS
+     CONSTRUCTOR FUNCTION OTR_USER_MSG RETURN SELF AS RESULT IS
+       BEGIN
+ 
+  SELF.TEXT := NULL;
+  SELF.MSGTYPE := NULL;
+
+        RETURN;
+       END OTR_USER_MSG;
+END;
 /
 --------------------------------------------------------
 --  DDL for Type OTT_CAP_MOVIMIENTOS
