@@ -1,10 +1,11 @@
 package org.model;
 
 
+import java.sql.SQLData;
 import java.util.Map;
 import com.fasterxml.jackson.annotation.*;
 
-public class Field {
+public class Field implements SQLData{
     private String newval;
     private String oldval;
     private String datatype;
