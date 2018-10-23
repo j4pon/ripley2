@@ -98,7 +98,7 @@ public class App {
 
 	public static Connection getOracleConnection() throws Exception {
 		String driver = "oracle.jdbc.driver.OracleDriver";
-		String url = "jdbc:oracle:thin:@192.168.56.3:1521:DB11G";
+		String url = "jdbc:oracle:thin:@192.168.0.240:1521:DB11G";
 		String username = "MFB";
 		String password = "MFB";
 

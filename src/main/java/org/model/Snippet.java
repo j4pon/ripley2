@@ -1,6 +1,8 @@
 package org.model;
 
 public class Snippet {
+	
+	/*
 	{ 
 	        "header":{
 	            "userid":"<<p1>>",
@@ -47,5 +49,6 @@ public class Snippet {
 	        "mainbtid":"1",
 	        "response": 1
 	}
+	*/
 }
 
